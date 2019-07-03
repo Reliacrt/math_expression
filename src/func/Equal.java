@@ -10,6 +10,9 @@ public interface Equal {
 
     static <T> boolean collection(Collection<T> collection1,
                                   Collection<T> collection2) {
+        if (!(collection1 instanceof List && collection2 instanceof List)) {
+            return false;
+        }
         List<T> list1 = new ArrayList<>(collection1);
         List<T> list2 = new ArrayList<>(collection2);
         return list1.size() == list2.size() &&
