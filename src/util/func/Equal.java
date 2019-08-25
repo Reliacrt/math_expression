@@ -1,4 +1,4 @@
-package func;
+package util.func;
 
 import java.util.ArrayList;
 import java.util.Collection;

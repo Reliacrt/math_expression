@@ -25,4 +25,11 @@ public class Expo extends Func {
         }
         return this;
     }
+
+
+
+    @Override
+    public String toString() {
+        return getChild(0) + "^" + getChild(1);
+    }
 }

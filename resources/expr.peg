@@ -1,0 +1,41 @@
+Expr <- Plus_Minus Item (Plus_Minus Item)*
+
+Item <- Plus_Minus Factor (MULTI Factor)*
+
+Factor <- 	Num /
+			LEFT Expr RIGHT /
+			Bottom (EXPONENT Num)?
+
+Bottom <-	Variable /
+			Func LEFT Factor RIGHT
+
+Func <- _Func SPACE
+_Func <- 'sin' / 'cos'
+
+Plus_Minus <- _Plus_Minus SPACE
+_Plus_Minus <- PLUS / MINUS
+
+Variable <- _Variable SPACE
+_Variable <- 'x'
+
+Num <- _Num SPACE
+_Num <- _Plus_Minus Digit+
+
+Digit <- [0-9]
+
+PLUS <- '+'
+MINUS <- '-'
+MULTI <- '*'
+DIVIDE <- '/'
+EXPONENT <- '^'
+
+_LEFT <- '('
+_RIGHT <- ')'
+
+LEFT <- _LEFT SPACE
+RIGHT <- _RIGHT SPACE
+
+SPACE <- SPACE_CHAR*
+SPACE_CHAR <- ' ' / '\t'
+
+EOF <- !.

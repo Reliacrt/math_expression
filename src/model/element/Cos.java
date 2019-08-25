@@ -12,4 +12,9 @@ public class Cos extends Func {
         multi.addChild(sin);
         return multi;
     }
+
+    @Override
+    public String toString() {
+        return "cos(" + getChild(0) + ")";
+    }
 }

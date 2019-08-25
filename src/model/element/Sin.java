@@ -9,4 +9,9 @@ public class Sin extends Func {
         addAllOperatedChildren(this, cos, Differentiable::derivate);
         return cos;
     }
+
+    @Override
+    public String toString() {
+        return "sin(" + getChild(0) + ")";
+    }
 }

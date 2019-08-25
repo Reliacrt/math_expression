@@ -6,6 +6,8 @@ import java.math.BigInteger;
 
 public class Number implements Differentiable {
     private BigInteger value;
+    public static final Differentiable MINUS_ONE = new Number(-1);
+    public static final Differentiable ONE = new Number(1);
 
     public Number(BigInteger value) {
         if (value == null) {
@@ -29,5 +31,10 @@ public class Number implements Differentiable {
     @Override
     public Differentiable derivate() {
         return new Number(0);
+    }
+
+    @Override
+    public String toString() {
+        return value.toString();
     }
 }

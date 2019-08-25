@@ -1,11 +1,10 @@
 package model.element;
 
-import func.BranchFunc;
+import util.func.BranchFunc;
 import model.characteristic.Coryled;
 import model.characteristic.Differentiable;
 import model.characteristic.Mergeable;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 

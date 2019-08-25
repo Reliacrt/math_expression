@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.function.Function;
 
-abstract class Func implements Differentiable, Recursive {
+public abstract class Func implements Differentiable, Recursive {
     private List<Differentiable> children;
 
     Func() {

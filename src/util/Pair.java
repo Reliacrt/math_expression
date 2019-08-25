@@ -49,24 +49,5 @@ public class Pair<A, B> {
         return "Pair: [" + first.toString() + ", " +
                 second.toString() + "]";
     }
-
-    public Object getAnother(Object one) {
-        if (first.equals(one)) {
-            return first;
-        } else {
-            return second;
-        }
-    }
-
-    public int count(Object object) {
-        int c = 0;
-        if (first.equals(object)) {
-            c += 1;
-        }
-        if (second.equals(object)) {
-            c += 1;
-        }
-        return c;
-    }
 }
 
